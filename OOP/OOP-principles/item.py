@@ -11,20 +11,38 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater than or equal to 0"
 
         # assigning attributes in __init__(Динамический метод) to self object
-        self.name = name
-        self.price = price
+        self.__name = name
+        self.__price = price
         self.quantity = quantity
 
         # Actions to execute
         Item.all.append(self)
 
-    def calculate_total_price(self):
-        return self.price * self.quantity
+    @property
+    def getPrice(self):
+        return self.__price
 
     def apply_discount(self):
-        self.price *= self.pay_rate
+        self.__price *= self.pay_rate
 
-    @classmethod#decorator
+    def apply_increment(self, increment_value):
+        self.__price = self.__price + self.__price*increment_value
+
+    @property  # Property Decorator=Read-Only Atrribute
+    def getName(self):  # getter
+        return self.__name
+
+    @getName.setter
+    def setName(self, value):
+        if(len(value) > 10):
+            raise Exception("This is too long!")
+        else:
+            self.__name = value
+
+    def calculate_total___price(self):
+        return self.__price * self.quantity
+
+    @classmethod  # decorator
     def instantiate_from_csv(cls):  # class method
         with open('items.csv', 'r') as f:
             reader = csv.DictReader(f)
@@ -49,11 +67,22 @@ class Item:
             return False
 
     def __repr__(self):  # representation of the object(Имеет доступ к class attributes)
-        return f"Item('{self.name}', {self.price},{self.quantity})"
+        return f"{self.__class__.__name__}('{self.name}', {self.__price},{self.quantity})"
 
-#Access to the Class method
-# Item.instantiate_from_csv()
-# print(Item.all)
+    # Simulating Abstraction
 
-#Access to the Static method
-print(Item.is_integer(7.1))
+    def __connect(self, smpt_server):
+        pass
+
+    def __prepare_body(self):
+        return f"""  
+        Hello Someone.
+        We have {self.__name} {self.quantity} times"""
+
+    def __send(self):
+        pass
+
+    def send_email(self):
+        self.__connect(12)
+        self.__prepare_body()
+        self.__send()

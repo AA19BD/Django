@@ -11,12 +11,24 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater than or equal to 0"
 
         # assigning attributes in __init__(Динамический метод) to self object
-        self.name = name
+        self.__name = name
         self.price = price
         self.quantity = quantity
 
         # Actions to execute
         Item.all.append(self)
+
+    @property
+    # Property Decorator=Read-Only Atrribute
+    def name(self):  # getter
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        if(len(value) > 10):
+            raise Exception("This is too long!")
+        else:
+            self.__name = value
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -24,7 +36,7 @@ class Item:
     def apply_discount(self):
         self.price *= self.pay_rate
 
-    @classmethod#decorator
+    @classmethod  # decorator
     def instantiate_from_csv(cls):  # class method
         with open('items.csv', 'r') as f:
             reader = csv.DictReader(f)
@@ -49,11 +61,4 @@ class Item:
             return False
 
     def __repr__(self):  # representation of the object(Имеет доступ к class attributes)
-        return f"Item('{self.name}', {self.price},{self.quantity})"
-
-#Access to the Class method
-# Item.instantiate_from_csv()
-# print(Item.all)
-
-#Access to the Static method
-print(Item.is_integer(7.1))
+        return f"{self.__class__.__name__}('{self.name}', {self.price},{self.quantity})"

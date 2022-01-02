@@ -24,7 +24,7 @@ class Item:
     def apply_discount(self):
         self.price *= self.pay_rate
 
-    @classmethod#decorator
+    @classmethod  # decorator
     def instantiate_from_csv(cls):  # class method
         with open('items.csv', 'r') as f:
             reader = csv.DictReader(f)
@@ -49,11 +49,26 @@ class Item:
             return False
 
     def __repr__(self):  # representation of the object(Имеет доступ к class attributes)
-        return f"Item('{self.name}', {self.price},{self.quantity})"
+        return f"{self.__class__.__name__}('{self.name}', {self.price},{self.quantity})"
 
-#Access to the Class method
-# Item.instantiate_from_csv()
-# print(Item.all)
 
-#Access to the Static method
-print(Item.is_integer(7.1))
+class Phone(Item):
+    
+
+    def __init__(self, name: str, price: float, quantity=0, broken_phones=0): #will override existing parent constructor
+        # Call super().__init__() function to have access to all attributes and methods of parent class
+        super().__init__(#Item class will keep everything that was created in  child class,due to super() method
+            name, price, quantity
+        )
+        # Run validations to receive arguments
+        assert broken_phones >= 0, f"Broken_phones {broken_phones} is not greater than or equal to 0"
+        # assigning attributes in __init__(Динамический метод) to self object
+
+        self.broken_phones = broken_phones
+      
+
+
+phone1 = Phone('jscPhone10', 500, 5, 1)
+# print(phone1.calculate_total_price())
+print(Item.all)
+print(Phone.all)
