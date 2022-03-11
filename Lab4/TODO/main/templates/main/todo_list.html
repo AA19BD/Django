@@ -1,0 +1,32 @@
+{% extends "main/todo.html" %}
+{% block body %}
+<h1>Task in {{ list.title }}</h1>
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Created</th>
+        <th>Due on</th>
+        <th>Owner</th>
+        <th>Mark</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td><a href="">{{ task.task }}</a></td>
+        <td>{{ task.created }}</td>
+        <td>{{ task.due_on }}</td>
+        <td>{{ task.owner }}</td>
+        <td>
+            <p id="finished">
+            {% if task.mark %}
+                {{ "Done" }}
+            {% else %}
+                {{ "Not Done" }}
+            {% endif %}
+            </p>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+<a href="{% url 'completed' list.id%}"><button id="viewb" style="font-family: 'Roboto', 'Noto', sans-serif">View completed tasks</button></a>
+{% endblock %}
