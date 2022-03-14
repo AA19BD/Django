@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='todo',
             name='created',
-            field=models.DateField(default='22-03-09'),
+            field=models.DateField(),
         ),
         migrations.AlterField(
             model_name='todo',
             name='due_on',
-            field=models.DateField(default='22-03-09'),
+            field=models.DateField(),
         ),
     ]

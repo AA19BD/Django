@@ -24,8 +24,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('task', models.CharField(max_length=100)),
-                ('created', models.DateField(default='22-03-09')),
-                ('due_on', models.DateField(default='22-03-09')),
+                ('created', models.DateField()),
+                ('due_on', models.DateField()),
                 ('owner', models.CharField(max_length=100)),
                 ('mark', models.BooleanField(default=True)),
                 ('list_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.TodoList')),
