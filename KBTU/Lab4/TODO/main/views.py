@@ -19,4 +19,4 @@ def todo_list_completed(request, id):
         'list': list
     }
     return render(request, 'main/completed_todo_list.html', context=context)
-
+gc
