@@ -2,7 +2,7 @@ import json
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Vacancy, Company
+from api.models import Vacancy, Company
 # Create your views here.
 
 
@@ -15,7 +15,7 @@ def list_companies(request):
     elif request.method == 'POST':
         data = json.loads(request.body)
         try:
-            company = Company.objects.create(
+            company = Company.objects.create(#**data-kwargs
                 name=data['name'], description=data['description'], city=data['city'], address=data['address'])
         except Exception as e:
             return JsonResponse({"message": str(e)})
