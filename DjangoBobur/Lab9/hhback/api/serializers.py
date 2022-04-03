@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Company
+from .models import Company
 
 class CompanySerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
@@ -11,5 +11,16 @@ class CompanySerializer(serializers.Serializer):
     def create(self,validated_data):
         company=Company.objects.create(**validated_data)
         return company
-# company = Company.objects.create(#**data-kwargs
- #  name=data['name'], description=data['description'], city=data['city'], address=data['address'])
+
+    def update(self, instance, validated_data):
+        instance.name=validated_data.get('name')
+        instance.description=validated_data.get('description')
+        instance.city=validated_data.get('city')
+        instance.address=validated_data.get('address')
+        instance.save()#saving to database
+        return instance
+
+class CompanySerializer2(serializers.ModelSerializer):
+    class Meta:
+        model=Company
+        fields=('id','name','description','city','address')

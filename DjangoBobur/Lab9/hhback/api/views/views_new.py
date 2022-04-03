@@ -2,8 +2,8 @@ import json
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from api.models import Vacancy, Company
-from api.serializers import CompanySerializer
+from ..models import Vacancy, Company
+from ..serializers import CompanySerializer,CompanySerializer2
 # Create your views here.
 
 
@@ -11,11 +11,11 @@ from api.serializers import CompanySerializer
 def list_companies(request):
     if request.method == 'GET':
         companies = Company.objects.all()
-        serializer=CompanySerializer(companies,many=True)
+        serializer = CompanySerializer2(companies, many=True)
         return JsonResponse(serializer.data, safe=False)
     elif request.method == 'POST':
         data = json.loads(request.body)
-        serializer=CompanySerializer(data=data)
+        serializer = CompanySerializer2(data=data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, safe=False)
@@ -29,18 +29,15 @@ def company_detail(request, pk):
     except Company.DoesNotExist as e:
         return JsonResponse({"message": str(e)})
     if request.method == 'GET':
-        return JsonResponse(company.to_json())
+        serializer = CompanySerializer2(company)
+        return JsonResponse(serializer.data)
     elif request.method == 'PUT':
         data = json.loads(request.body)
-        try:
-            company.name = data['name']
-            company.description = data['description']
-            company.city = data['city']
-            company.address = data['address']
-            company.save()  # updating new company item
-        except Exception as e:
-            return JsonResponse({"message": str(e)})
-        return JsonResponse(company.to_json())
+        serializer = CompanySerializer2(instance=company,data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        return JsonResponse(serializer.errors)
     elif request.method == 'DELETE':
         company.delete()
         return JsonResponse({"message": "Item was deleted!"}, status=204)
