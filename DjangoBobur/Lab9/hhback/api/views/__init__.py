@@ -1,1 +1,1 @@
-from .views_generic_v2 import CompaniesListAPIView,CompanyDetailAPIView
+from .views_generic_v2 import CompaniesListAPIView,CompanyDetailAPIView,VacancyListAPIView,VacancyDetailAPIView

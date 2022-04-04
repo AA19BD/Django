@@ -37,5 +37,7 @@ class Vacancy(models.Model):
             "description": self.description,
             "salary": self.salary,
         }
+    def __str__(self):
+        return f'{self.id}-id|{self.name}| {self.description} |{self.salary}'
     
     
