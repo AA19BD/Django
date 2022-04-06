@@ -1,22 +1,40 @@
-from django.shortcuts import render
 from .models import Todo, TodoList
-from django.views.generic import DeleteView
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from .serializers import ListSerializer,TodoSerializer
 
-def todo_list(request, id):
-    tasks = Todo.objects.filter(list_id=id)
-    list = TodoList.objects.get(id=id)
-    context = {
-        'tasks': tasks,
-        'list': list
-    }
-    return render(request, 'main/todo_list.html', context=context)
 
-def todo_list_completed(request, id):
-    tasks = Todo.objects.filter(list_id=id, mark=True)
-    list = TodoList.objects.get(id=id)
-    context = {
-        'tasks': tasks,
-        'list': list
-    }
-    return render(request, 'main/completed_todo_list.html', context=context)
-gc
+class ListViewSet(viewsets.ModelViewSet):
+    queryset = TodoList.objects.all()
+    permission_classes = (IsAuthenticated,)
+
+    def get_serializer_class(self):
+        if self.action == 'list' or  self.action=="create":
+            return ListSerializer
+        return TodoSerializer
+
+class TasksByListViewSet(viewsets.ModelViewSet):
+    queryset = Todo.objects.all()
+    permission_classes = (IsAuthenticated,)
+    serializer_class = TodoSerializer
+
+    @action(methods=['GET'], detail=False, permission_classes=(IsAuthenticated,))
+    def tasks_by_list(self, request, pk):
+        queryset = Todo.objects.filter(list_id=pk)
+        serializer = TodoSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+class CompletedTaskViewSet(viewsets.ModelViewSet):
+    queryset = Todo.objects.all()
+    permission_classes = (IsAuthenticated,)
+    serializer_class = TodoSerializer
+
+    @action(methods=['GET'], detail=False, permission_classes=(IsAuthenticated,))
+    def completed_tasks(self, request, pk):
+        queryset = Todo.objects.filter(list_id=pk).filter(mark=True)
+        serializer = TodoSerializer(queryset, many=True)
+        return Response(serializer.data)
+

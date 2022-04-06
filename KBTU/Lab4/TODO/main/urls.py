@@ -1,7 +1,12 @@
-from django.contrib import admin
 from django.urls import path
-from .views import todo_list,todo_list_completed
+from .views import ListViewSet,TasksByListViewSet,CompletedTaskViewSet
+
+
 urlpatterns = [
-    path('todos/<int:id>/',todo_list,name="todos"),
-    path('todos/<int:id>/completed/', todo_list_completed,name="completed"),
+    path('todos/', ListViewSet.as_view({'get': 'list','post': 'create'})),
+    path('todos/<int:pk>/', TasksByListViewSet.as_view({'get': 'tasks_by_list',
+                                                        'post': 'create',
+                                                        'put': 'update',
+                                                        'delete': 'destroy'})),
+    path('todos/<int:pk>/completed/', CompletedTaskViewSet.as_view({'get': 'completed_tasks'}))
 ]

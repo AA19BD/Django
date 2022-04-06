@@ -19,5 +19,3 @@ class Todo(models.Model):
         verbose_name = "Task"
         verbose_name_plural = "Tasks"
         ordering = ('task',)
-
-    cl
