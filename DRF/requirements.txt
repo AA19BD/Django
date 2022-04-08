@@ -1,0 +1,5 @@
+# Django==3.2.12
+djangorestframework
+PyYAML # for data serialization format
+requests # Requests is an elegant and simple HTTP library for Python
+django-cors-headers #This allows in-browser requests to your Django application from other origins
