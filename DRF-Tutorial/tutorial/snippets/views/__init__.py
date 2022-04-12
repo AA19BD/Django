@@ -1,0 +1,1 @@
+from .views_generics import Snippetlist,SnippetDetail
