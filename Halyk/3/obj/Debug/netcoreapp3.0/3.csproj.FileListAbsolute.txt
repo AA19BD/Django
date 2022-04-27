@@ -1,0 +1,11 @@
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/bin/Debug/netcoreapp3.0/3
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/bin/Debug/netcoreapp3.0/3.deps.json
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/bin/Debug/netcoreapp3.0/3.runtimeconfig.json
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/bin/Debug/netcoreapp3.0/3.runtimeconfig.dev.json
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/bin/Debug/netcoreapp3.0/3.dll
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/bin/Debug/netcoreapp3.0/3.pdb
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/obj/Debug/netcoreapp3.0/3.csprojAssemblyReference.cache
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/obj/Debug/netcoreapp3.0/3.AssemblyInfoInputs.cache
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/obj/Debug/netcoreapp3.0/3.AssemblyInfo.cs
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/obj/Debug/netcoreapp3.0/3.dll
+/Users/abylayaitbanov/Desktop/Django/Halyk/3/obj/Debug/netcoreapp3.0/3.pdb
