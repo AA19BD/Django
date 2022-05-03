@@ -3,7 +3,7 @@ from .models import TodoList, Todo
 
 @admin.register(Todo)
 class TodoListAdmin(admin.ModelAdmin):
-    list_display = ('task', 'created', 'due_on', 'owner', 'mark','list_id')
+    list_display = ('task', 'created', 'due_on', 'owner', 'mark','list_id','img','file')
     search_fields = ('task', 'mark','list_id')
     list_filter = ('task', 'created', 'due_on', 'owner', 'mark','list_id',)
 

@@ -1,0 +1,21 @@
+WARNING -- 2022-05-03 15:51:41,146: Error 404
+INFO -- 2022-05-03 15:52:17,843: TodoList was received by id!
+INFO -- 2022-05-03 15:53:13,971: List has been used!
+INFO -- 2022-05-03 15:54:32,053: ListViewSet was used!
+INFO -- 2022-05-03 15:54:51,258: ListViewSet was used!
+INFO -- 2022-05-03 15:56:41,418: TodosByTodoList was used!
+INFO -- 2022-05-03 16:03:19,857: TodoList was received/created by id!
+INFO -- 2022-05-03 16:03:29,228: List has been used/created!
+INFO -- 2022-05-03 16:20:44,434: Watching for file changes with StatReloader
+WARNING -- 2022-05-03 16:21:13,607: Unauthorized: /todos/
+WARNING -- 2022-05-03 16:21:13,609: "GET /todos/ HTTP/1.1" 401 35
+INFO -- 2022-05-03 16:21:19,898: "POST /auth/login/ HTTP/1.1" 200 173
+INFO -- 2022-05-03 16:21:22,793: "GET /todos/ HTTP/1.1" 200 2054
+INFO -- 2022-05-03 16:21:25,746: TodoList was received/created by id!
+INFO -- 2022-05-03 16:21:25,747: "GET /todo_list/2/ HTTP/1.1" 200 27
+INFO -- 2022-05-03 16:21:40,420: TodoList was received/created by id!
+INFO -- 2022-05-03 16:21:40,422: "GET /todo_list/3/ HTTP/1.1" 200 13
+INFO -- 2022-05-03 16:22:57,662: /Users/abylayaitbanov/Desktop/Django/KBTU/Lab4/TODO/TODO/settings.py changed, reloading.
+INFO -- 2022-05-03 16:24:16,162: TodosByTodoList was used!
+INFO -- 2022-05-03 16:24:24,262: TodoList was received/created by id!
+INFO -- 2022-05-03 16:24:29,886: List has been used/created!
