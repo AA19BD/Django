@@ -1,0 +1,46 @@
+INFO -- 2022-05-04 19:27:45,469: category is created, id: Category1
+INFO -- 2022-05-04 19:35:49,025: categories list is returned
+INFO -- 2022-05-04 19:36:11,631: categories list is returned
+INFO -- 2022-05-04 19:36:15,157: category is returned, id: 2
+INFO -- 2022-05-04 19:36:16,904: category is returned, id: 1
+INFO -- 2022-05-04 19:36:24,834: category is returned, id: 1
+INFO -- 2022-05-04 19:36:32,851: category is returned, id: 1
+INFO -- 2022-05-04 21:47:37,416: categories list is returned
+INFO -- 2022-05-04 21:48:00,316: categories list is returned
+INFO -- 2022-05-04 21:50:18,998: category is created, id: Category3
+INFO -- 2022-05-04 21:51:19,863: categories list is returned
+INFO -- 2022-05-04 21:52:58,571: category is returned, id: 1
+INFO -- 2022-05-04 21:54:25,171: category is changed, id: 1
+INFO -- 2022-05-04 21:57:33,604: orders are returned
+INFO -- 2022-05-04 21:58:07,945: orders are returned
+INFO -- 2022-05-04 22:04:03,909: order is created, id: 3
+INFO -- 2022-05-04 22:04:20,941: orders are returned
+INFO -- 2022-05-04 22:05:22,100: categories list is returned
+INFO -- 2022-05-04 22:06:02,838: category is returned, id: 1
+INFO -- 2022-05-04 22:06:48,443: categories list is returned
+INFO -- 2022-05-04 22:07:07,588: category is returned, id: 1
+INFO -- 2022-05-04 22:08:04,149: categories list is returned
+INFO -- 2022-05-04 22:08:08,802: category is returned, id: 2
+INFO -- 2022-05-04 22:08:12,167: orders are returned
+INFO -- 2022-05-04 22:10:29,388: orders are returned
+INFO -- 2022-05-04 22:10:31,901: order is returned, id: 1
+INFO -- 2022-05-04 22:13:04,564: order is deleted, id: 3
+INFO -- 2022-05-04 22:16:05,711: cart is returned, user id: 4
+INFO -- 2022-05-04 22:19:05,255: cart is changed, user id: 4
+INFO -- 2022-05-04 22:55:24,872: categories list is returned
+INFO -- 2022-05-04 22:58:08,811: category is created, id: Category4
+INFO -- 2022-05-04 22:58:58,330: category is returned, id: 1
+INFO -- 2022-05-04 23:00:37,825: category is changed, id: 1
+INFO -- 2022-05-04 23:24:27,271: categories list is returned
+INFO -- 2022-05-04 23:24:39,500: category is returned, id: 1
+INFO -- 2022-05-04 23:37:45,727: orders are returned
+INFO -- 2022-05-04 23:38:13,499: order is returned, id: 1
+INFO -- 2022-05-04 23:38:28,763: order is returned, id: 1
+INFO -- 2022-05-04 23:42:22,169: order is changed, id: 1
+INFO -- 2022-05-04 23:42:28,535: order is changed, id: 1
+INFO -- 2022-05-04 23:45:30,903: categories list is returned
+INFO -- 2022-05-04 23:45:33,798: category is created, id: Category4
+INFO -- 2022-05-04 23:45:36,829: category is returned, id: 1
+INFO -- 2022-05-04 23:45:39,285: category is changed, id: 1
+INFO -- 2022-05-04 23:52:16,504: orders are returned
+INFO -- 2022-05-04 23:52:49,920: orders are returned

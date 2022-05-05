@@ -1,0 +1,49 @@
+ERROR -- 2022-05-04 17:12:18,055: client cannot be created, error: The given email must be set
+ERROR -- 2022-05-04 17:25:29,312: client cannot be created, error: The given email must be set
+ERROR -- 2022-05-04 17:25:37,303: client cannot be created, error: The given email must be set
+ERROR -- 2022-05-04 17:26:12,120: client cannot be created, error: The given email must be set
+ERROR -- 2022-05-04 17:33:23,510: client cannot be created, error: The given email must be set
+ERROR -- 2022-05-04 17:33:41,274: client cannot be created, error: The given email must be set
+INFO -- 2022-05-04 17:39:18,565: client is created, id: client2@gmail.com
+INFO -- 2022-05-04 17:40:07,992: client is created, id: client3@gmail.co
+ERROR -- 2022-05-04 17:47:21,815: client is not found, id: 1
+ERROR -- 2022-05-04 17:48:13,365: client is not found, user id: 1
+ERROR -- 2022-05-04 17:49:45,028: client is not found, id: 1
+ERROR -- 2022-05-04 17:49:52,870: client is not found, id: 1
+ERROR -- 2022-05-04 17:50:41,127: client is not found, id: 1
+INFO -- 2022-05-04 17:51:24,161: client is created, id: client4@gmail.com
+ERROR -- 2022-05-04 17:53:41,978: client is not found, id: 1
+ERROR -- 2022-05-04 17:56:12,078: client is not found, id: 1
+ERROR -- 2022-05-04 17:56:13,834: client is not found, id: 1
+ERROR -- 2022-05-04 17:56:15,404: client is not found, id: 1
+ERROR -- 2022-05-04 17:59:26,560: profile is not found, user id: 1
+ERROR -- 2022-05-04 18:02:22,684: client is not found, id: 1
+INFO -- 2022-05-04 18:09:33,322: client is created, id: client6@gmail.com
+INFO -- 2022-05-04 18:09:58,189: client is created, id: client7@gmail.com
+ERROR -- 2022-05-04 18:10:30,730: client is not found, id: 1
+ERROR -- 2022-05-04 18:12:07,243: client is not found, id: 1
+INFO -- 2022-05-04 18:51:37,886: client is created, id: client8@gmail.com
+INFO -- 2022-05-04 19:08:36,683: client is returned, id: client8@gmail.com
+INFO -- 2022-05-04 19:09:13,843: client is created, id: client10@gmail.com
+INFO -- 2022-05-04 19:09:29,904: client is returned, id: client10@gmail.com
+INFO -- 2022-05-04 19:11:35,704: courier is created, id: courier1@gmail.com
+INFO -- 2022-05-04 19:15:10,646: courier is created, id: courier2@gmail.com
+INFO -- 2022-05-04 19:16:27,713: profile is returned, id: courier2@gmail.com
+INFO -- 2022-05-04 19:24:07,291: staff is created, id: staff1@gmail.com
+ERROR -- 2022-05-04 19:30:49,535: staff cannot be created, error: The given email must be set
+INFO -- 2022-05-04 22:33:23,518: profile is returned, id: client2@gmail.com
+INFO -- 2022-05-04 22:36:29,277: profile is updated, id: client2@gmail.com
+INFO -- 2022-05-04 22:36:44,516: profile is updated, id: client2@gmail.com
+INFO -- 2022-05-04 22:38:08,514: card is returned, user id: 4
+INFO -- 2022-05-04 22:39:56,103: card is updated, user id: 4
+INFO -- 2022-05-04 22:40:02,748: card is returned, user id: 4
+INFO -- 2022-05-04 22:44:25,255: client is returned, id: client2@gmail.com
+INFO -- 2022-05-04 22:46:18,083: client is returned, id: client2@gmail.com
+INFO -- 2022-05-04 22:47:27,971: client is updated, id: client2@gmail.com
+INFO -- 2022-05-04 23:31:43,621: profile is returned, id: courier2@gmail.com
+INFO -- 2022-05-04 23:34:21,504: profile is updated, id: courier2@gmail.com
+INFO -- 2022-05-04 23:40:12,697: profile is returned, id: courier2@gmail.com
+INFO -- 2022-05-05 01:23:36,419: profile is returned, id: client2@gmail.com
+INFO -- 2022-05-05 01:25:29,538: profile is returned, id: client2@gmail.com
+INFO -- 2022-05-05 01:27:30,085: profile is returned, id: client2@gmail.com
+INFO -- 2022-05-05 01:27:35,850: card is returned, user id: 4
